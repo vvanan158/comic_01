@@ -1,7 +1,8 @@
-package com.example.commic
+package com.example.comic.screen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.comic.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
