@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.comic.screen.container.ContainerViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screen.container.ContainerFragment">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/containerViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavigationView" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:itemIconTint="@color/gun_powder"
+            app:itemTextColor="@color/gun_powder"
+            app:labelVisibilityMode="selected"
+            app:menu="@menu/menu_nav_container" />
+    </RelativeLayout>
+</layout>

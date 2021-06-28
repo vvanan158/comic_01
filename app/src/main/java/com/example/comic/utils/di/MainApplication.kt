@@ -1,14 +1,13 @@
-package com.tuanlvt.mvvm.utils.di
+package com.example.comic.utils.di
 
 import android.app.Application
 import com.example.comic.data.di.dataSourceModule
 import com.example.comic.data.di.networkModule
 import com.example.comic.data.di.repositoryModule
-import com.example.comic.utils.di.appModule
-import com.example.comic.utils.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 
 class MainApplication : Application() {
 
@@ -17,13 +16,13 @@ class MainApplication : Application() {
 
         val modules = listOf(
             appModule,
-                repositoryModule,
-                dataSourceModule,
-                networkModule,
-                viewModelModule
+            repositoryModule,
+            dataSourceModule,
+            networkModule,
+            viewModelModule
         )
         startKoin {
-            androidLogger()
+            androidLogger(Level.ERROR)
             androidContext(this@MainApplication)
             modules(modules)
         }

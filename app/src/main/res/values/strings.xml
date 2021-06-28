@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">commic</string>
+    <string name="app_name">comic</string>
+    <string name="home">Home</string>
+    <string name="me">Me</string>
 </resources>
